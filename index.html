@@ -196,14 +196,13 @@
         <label for="ultimaRefeicao">Quando foi sua última refeição?</label>
         <select id="ultimaRefeicao" required>
           <option value="Jejum de 12 horas">Jejum de 12 horas</option>
-          <option value="Pré-almoço">Pré-almoço</option>
-          <option value="Pré-jantar">Pré-jantar</option>
-          <option value="15 minutos">15 minutos</option>
           <option value="30 minutos">30 minutos</option>
-          <option value="45 minutos">45 minutos</option>
           <option value="60 minutos">60 minutos</option>
-          <option value="75 minutos">75 minutos</option>
           <option value="90 minutos">90 minutos</option>
+          <option value="120 minutos">120 minutos</option>
+          <option value="180 minutos">180 minutos</option>
+          <option value="Pré-almoço (240 minutos)">Pré-almoço (240 minutos)</option>
+          <option value="Pré-jantar (240 minutos)">Pré-jantar(240 minutos)</option>
         </select>
       </div>
 
@@ -268,7 +267,7 @@
       const prazerosaContainer = document.getElementById('prazerosaContainer');
       const familiarContainer = document.getElementById('familiarContainer');
 
-      if (ultimaRefeicao === '15 minutos') {
+      if (ultimaRefeicao === '30 minutos') {
         prazerosaContainer.style.display = 'block';
         familiarContainer.style.display = 'block';
       } else {
@@ -287,8 +286,8 @@
   const consegueComer = document.getElementById('consegueComer').value;
   const ultimaRefeicao = document.getElementById('ultimaRefeicao').value;
   const tipoRefeicao = document.getElementById('tipoRefeicao').value;
-  const prazerosa = ultimaRefeicao === '15 minutos' ? document.getElementById('prazerosa').value : "Não informado";
-  const familiar = ultimaRefeicao === '15 minutos' ? document.getElementById('familiar').value : "Não informado";
+  const prazerosa = ultimaRefeicao === '30 minutos' ? document.getElementById('prazerosa').value : "Não informado";
+  const familiar = ultimaRefeicao === '30 minutos' ? document.getElementById('familiar').value : "Não informado";
 
   if (!nome) {
     alert("Por favor, insira seu nome antes de enviar.");
@@ -311,7 +310,7 @@
       document.getElementById('ultimaRefeicaoResposta').textContent = "Respondido";
       document.getElementById('tipoRefeicaoResposta').textContent = "Respondido";
 
-  if (ultimaRefeicao === '15 minutos') {
+  if (ultimaRefeicao === '30 minutos') {
     document.getElementById('prazerosaResposta').textContent = "Respondido";
     document.getElementById('familiarResposta').textContent = "Respondido";
     document.getElementById('prazerosaResposta').parentElement.style.display = "block";
